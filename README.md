@@ -10,6 +10,7 @@ Enable this repo in your flake.nix inputs using `proton-cachyos.url = "github:po
 Enable the overlay using `nixpkgs.overlays = [ proton-cachyos.overlays.default ];`.
 
 All packages maintain the same structure for installation, that being:
+
 `programs.steam.extraCompatPackages = with pkgs; [ proton-cachyos ];`
 
 `programs.steam.extraCompatPackages = with pkgs; [ proton-cachyos-x86_64_v2 ];`
