@@ -4,42 +4,45 @@
   variant,
 }:
 
+let
+  # Used to set folder name of tool
+  folderName = if variant == "base" then "proton-cachyos" else "proton-cachyos-${variant}";
+  # Used to set display name of tool in Steam
+  steamName = if variant == "base" then "Proton CachyOS" else "Proton CachyOS ${variant}";
+
+in
 pkgs.stdenv.mkDerivation {
-  # If variant is "base", keep the name simple. Otherwise append the micro-architecture.
-  pname = if variant == "base" then "proton-cachyos" else "proton-cachyos-${variant}";
+  pname = folderName;
   version = pkgs.lib.removePrefix "cachyos-" source.version;
 
   inherit (source) src;
 
   nativeBuildInputs = [ pkgs.xz ];
+  outputs = [
+    "out"
+    "steamcompattool"
+  ];
 
   installPhase = ''
     runHook preInstall
 
-    # Determine folder name based on variant
-    local folderName="proton-cachyos"
-    if [ "${variant}" != "base" ]; then
-      folderName="proton-cachyos-${variant}"
-    fi
+    # Create the steamcompat directory
+    mkdir -p $steamcompattool
+    cp -r ./* $steamcompattool/
 
-    # 2. Create the unique directory
-    mkdir -p $out/share/steam/compatibilitytools.d/$folderName
-    cp -r ./* $out/share/steam/compatibilitytools.d/$folderName/
+    # Modify the display name
+    sed -i -r "s|\"display_name\".*|\"display_name\" \"${steamName}\"|" \
+      $steamcompattool/compatibilitytool.vdf
 
-    # 3. Patch the Display Name so it shows up clearly in Steam
-    local uiName="Proton CachyOS"
-    if [ "${variant}" != "base" ]; then
-      uiName="Proton CachyOS ${variant}"
-    fi
-
-    sed -i -r "s|\"display_name\".*|\"display_name\" \"$uiName\"|" \
-      $out/share/steam/compatibilitytools.d/$folderName/compatibilitytool.vdf
+    # Symlink to $out to avoid unclean /usr pathing of tools
+    mkdir -p $out/share/steam/compatibilitytools.d/${folderName}
+    ln -s $steamcompattool $out/share/steam/compatibilitytools.d/${folderName}
 
     runHook postInstall
   '';
 
   meta = with pkgs.lib; {
-    description = "Proton-CachyOS ${variant}";
+    description = "${steamName}";
     homepage = "https://github.com/CachyOS/proton-cachyos";
     license = licenses.bsd3;
     platforms = [ "x86_64-linux" ];
