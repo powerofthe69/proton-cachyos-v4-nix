@@ -18,7 +18,7 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixos-unstable
           extra_nix_config: |
-            experimental-features = nix-command flakes;
+            experimental-features = nix-command flakes
 
       - name: Update flake.lock # mitigate user downloading multiple revisions of nixpkgs/nixos-unstable
         run: |
