@@ -8,11 +8,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-iSmiywyMhvar85BVE3BEzqlnFUrssw9XcUcYNb26cK8=",
+            "sha256": "sha256-9WUbBC74RNR2c2/QDHeB3WPzCVrSIFzZ930naakS18I=",
             "type": "url",
-            "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-10.0-20260228-slr/proton-cachyos-10.0-20260228-slr-x86_64.tar.xz"
+            "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-10.0-20260312-slr/proton-cachyos-10.0-20260312-slr-x86_64.tar.xz"
         },
-        "version": "cachyos-10.0-20260228-slr"
+        "version": "cachyos-10.0-20260312-slr"
     },
     "proton-cachyos-x86_64-v2": {
         "cargoLock": null,
@@ -23,11 +23,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-lzOXLYnKrVQvQa4sAkn7cW2h0AoOpCHyz9p/oTWewUk=",
+            "sha256": "sha256-4akXJ03GKp2h5RBNfA9gth3abKJUO24JRqTcnVK3nS8=",
             "type": "url",
-            "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-10.0-20260228-slr/proton-cachyos-10.0-20260228-slr-x86_64_v2.tar.xz"
+            "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-10.0-20260312-slr/proton-cachyos-10.0-20260312-slr-x86_64_v2.tar.xz"
         },
-        "version": "cachyos-10.0-20260228-slr"
+        "version": "cachyos-10.0-20260312-slr"
     },
     "proton-cachyos-x86_64-v3": {
         "cargoLock": null,
@@ -38,11 +38,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-sVICz5IJ13mbq7djMGxgjKCGvXW2Yt/c6a151QNrD0I=",
+            "sha256": "sha256-Qb7VdOu+iDIdCdEdhr4GqMqKLeKTf7O6NhDUaM1NmHA=",
             "type": "url",
-            "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-10.0-20260228-slr/proton-cachyos-10.0-20260228-slr-x86_64_v3.tar.xz"
+            "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-10.0-20260312-slr/proton-cachyos-10.0-20260312-slr-x86_64_v3.tar.xz"
         },
-        "version": "cachyos-10.0-20260228-slr"
+        "version": "cachyos-10.0-20260312-slr"
     },
     "proton-cachyos-x86_64-v4": {
         "cargoLock": null,
@@ -53,10 +53,10 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-XAHT9sWA9CE1d6C6KavcLvwyMM1bmrcQ2WKqNs3jgKg=",
+            "sha256": "sha256-j9p4Emw3LEkRvo0TfkjnPTob9PKvDQ/z4xCsBd1RD7U=",
             "type": "url",
-            "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-10.0-20260228-slr/proton-cachyos-10.0-20260228-slr-x86_64_v4.tar.xz"
+            "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-10.0-20260312-slr/proton-cachyos-10.0-20260312-slr-x86_64_v4.tar.xz"
         },
-        "version": "cachyos-10.0-20260228-slr"
+        "version": "cachyos-10.0-20260312-slr"
     }
 }
