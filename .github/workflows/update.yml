@@ -25,7 +25,10 @@ jobs:
           nix flake update
 
       - name: Run nvfetcher
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          ./scripts/sync-proton-variants.sh
           nix shell nixpkgs#nvfetcher -c nvfetcher -o pkgs/_sources
 
       - name: Validate that flake builds after updating # unlikely with proton-cachyos, but best practice
@@ -38,4 +41,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(deps): update proton-cachyos sources and flake.lock"
-          file_pattern: "pkgs/_sources/* flake.lock"
+          file_pattern: "nvfetcher.toml pkgs/_sources/* flake.lock"
