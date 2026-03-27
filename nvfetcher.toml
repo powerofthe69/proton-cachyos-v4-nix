@@ -1,6 +1,6 @@
 # standard
 [proton-cachyos]
-src.manual = "cachyos-10.0-20260320-slr"
+src.github = "CachyOS/proton-cachyos"
 fetch.url = "https://github.com/CachyOS/proton-cachyos/releases/download/$ver/proton-$ver-x86_64.tar.xz"
 
 # v2
@@ -10,10 +10,10 @@ fetch.url = "https://github.com/CachyOS/proton-cachyos/releases/download/$ver/pr
 
 # v3
 [proton-cachyos-x86_64-v3]
-src.manual = "cachyos-10.0-20260320-slr"
+src.github = "CachyOS/proton-cachyos"
 fetch.url = "https://github.com/CachyOS/proton-cachyos/releases/download/$ver/proton-$ver-x86_64_v3.tar.xz"
 
 # v4
 [proton-cachyos-x86_64-v4]
-src.manual = "cachyos-10.0-20260320-slr"
+src.github = "CachyOS/proton-cachyos"
 fetch.url = "https://github.com/CachyOS/proton-cachyos/releases/download/$ver/proton-$ver-x86_64_v4.tar.xz"
