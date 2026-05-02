@@ -17,8 +17,4 @@ All packages maintain the same structure for installation, that being:
 
 `programs.steam.extraCompatPackages = with pkgs; [ proton-cachyos ];`
 
-`programs.steam.extraCompatPackages = with pkgs; [ proton-cachyos-x86_64_v2 ];`
-
 `programs.steam.extraCompatPackages = with pkgs; [ proton-cachyos-x86_64_v3 ];`
-
-`programs.steam.extraCompatPackages = with pkgs; [ proton-cachyos-x86_64_v4 ];`

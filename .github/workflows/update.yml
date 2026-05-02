@@ -28,7 +28,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ./scripts/sync-proton-variants.sh
           nix shell nixpkgs#nvfetcher -c nvfetcher -o pkgs/_sources
 
       - name: Validate that flake builds after updating # unlikely with proton-cachyos, but best practice
